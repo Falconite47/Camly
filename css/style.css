@@ -113,12 +113,22 @@ body {
 
 .hero .left-side {
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .hero .left-side .title {
-  line-height: 70px;
-  font-size: 4rem;
+  line-height: 60px;
+  font-size: 3.5rem;
   padding-bottom: 0.5rem;
+}
+
+@media (max-width: 1145px) {
+  .hero .left-side .title {
+    line-height: 45px;
+    font-size: 3rem;
+  }
 }
 
 .hero .left-side p {
@@ -160,8 +170,8 @@ body {
 .hero .left-side .buttons .contact-btn:hover:before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-  -webkit-transform-origin: right;
-          transform-origin: right;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .hero .left-side .buttons .contact-btn:hover {
@@ -180,8 +190,8 @@ body {
   overflow: hidden;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transform-origin: right;
-          transform-origin: right;
+  -webkit-transform-origin: top;
+          transform-origin: top;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
@@ -191,6 +201,12 @@ body {
 }
 
 .hero .right-side img {
-  max-height: 18rem;
+  max-height: 15rem;
+}
+
+@media (max-width: 1145px) {
+  .hero .right-side img {
+    max-height: 13rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

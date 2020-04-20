@@ -1,6 +1,10 @@
 $blue : linear-gradient(90deg,#0041f5,#0059ff);
 $shadow : 0 0 10px 1.5px #0059ff;
 
+@mixin thousand {
+    @media(max-width: 1145px) {@content;};
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -104,11 +108,16 @@ body {
 
     .left-side {
         position: relative;
-
+        flex:1;
         .title {
-            line-height: 70px;
-            font-size: 4rem;
+            line-height: 60px;
+            font-size: 3.5rem;
             padding-bottom: 0.5rem;
+
+            @include thousand {
+                line-height: 45px;
+                font-size: 3rem;
+            }
         }
 
         p{
@@ -144,7 +153,7 @@ body {
 
                 &:hover:before {
                     transform: scaleX(1);
-                    transform-origin: right;
+                    transform-origin: top;
                 }
 
                 &:hover {
@@ -162,7 +171,7 @@ body {
                     background: white;
                     overflow: hidden;
                     transform: scaleX(0);
-                    transform-origin: right;
+                    transform-origin: top;
                     transition: 0.25s ease-in-out;
                 }
 
@@ -174,7 +183,12 @@ body {
     .right-side{
         position: relative;
         img {
-            max-height: 18rem;
+            max-height: 15rem;
+
+            @include thousand {
+                max-height: 13rem;
+            }
+
         }
 
     }
